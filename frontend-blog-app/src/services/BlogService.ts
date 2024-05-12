@@ -34,6 +34,18 @@ class BlogService {
         
         return Promise.resolve(BlogService.blogList);
     }
+
+    public async getBlog(id: number) {
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        const response = await fetch(BlogService.blogURL + "/" + id);
+
+        if(!response.ok)
+            throw new Error('Could not fetch the data for that resource')
+
+        return response.json();
+    }
 }
 
 export default BlogService;

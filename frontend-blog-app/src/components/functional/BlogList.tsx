@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Blog from "../../models/Blog";
 
 function BlogList({blogs}: {blogs: Blog[]}) {
@@ -17,7 +18,7 @@ function BlogList({blogs}: {blogs: Blog[]}) {
                                         <span>Creation date: </span>
                                         <span>{blog.creationDate}</span>
                                     </div>
-                                    <button className="btn btn-info">check</button>
+                                    <Link className="btn btn-info" to={"/blogs/" + blog.id} >check</Link>
                                 </div>
                             </div>
                         </div>

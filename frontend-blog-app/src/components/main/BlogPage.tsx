@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import BlogService from "../../services/BlogService";
-import BlogList from "../functional/BlogList";
+import { useParams } from "react-router-dom";
 import Blog from "../../models/Blog";
+import BlogService from "../../services/BlogService";
+import BlogDetails from "../functional/BlogDetails";
 
-function BlogSearcher() {
+function BlogPage() {
 
-    const [blogs, setBlogs] = useState<Blog[]>([]);
+    const { id } = useParams()
+
+    const [blog, setBlog] = useState<Blog>();
     const [isPending, setPending] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);
 
@@ -13,9 +16,9 @@ function BlogSearcher() {
         
         const blogService = BlogService.getBlogService();
 
-        blogService.getBlogs()
-            .then( (data: Blog[]) => {
-                setBlogs(data) 
+        blogService.getBlog(parseInt(id!))
+            .then( (data: Blog) => {
+                setBlog(data) 
                 setPending(false)
                 setError(null);
             })
@@ -24,15 +27,15 @@ function BlogSearcher() {
                 setPending(false);
             })
 
-    }, []);
-
-    return (    
+    }, [id]);
+    
+    return (
         <div>
             {error && <h2>{error.message}</h2>}
             {isPending && <h2>Loading...</h2>}
-            {blogs && <BlogList blogs={blogs} />}
+            {blog && <BlogDetails blog={blog} />}
         </div>
     );
 }
 
-export default BlogSearcher;
+export default BlogPage;

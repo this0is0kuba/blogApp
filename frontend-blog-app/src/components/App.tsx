@@ -1,7 +1,8 @@
 import Navbar from './layout/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import Home from './main/Home';
 import BlogSearcher from './main/BlogSearcher';
+import BlogPage from './main/BlogPage';
 
 function App() {
   return (
@@ -10,14 +11,13 @@ function App() {
 
         <main className='container text-light rounded'>
 
-          <BrowserRouter>
             <Routes>
 
               <Route path='/' element={<Home/>}></Route>
               <Route path='/blogs' element={<BlogSearcher/>}></Route>
+              <Route path='/blogs/:id' element={<BlogPage/>} ></Route>
 
             </Routes>
-          </BrowserRouter>
 
         </main>
     </div>
