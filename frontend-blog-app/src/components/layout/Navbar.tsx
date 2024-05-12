@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return (
 
@@ -7,12 +9,12 @@ function Navbar() {
 
             <div className="links">
 
-                <a href="/" className="btn btn-dark">Home</a>
-                <a href="/blogs" className="ms-2 btn btn-dark">Blogs</a>
-                <a href="/yourBlogs" className="ms-2 btn btn-dark">Your Blogs</a> 
-                <a href="/create" className="ms-2 btn btn-dark">New Blog</a>
-                <a href="/manage" className="ms-2 btn btn-dark">Manage</a>
-                <a href="/profil" className="ms-2 btn btn-dark">Account</a>
+                <Link to="/" className="btn">Home</Link>
+                <Link to="/blogs" className="ms-2 btn btn-dark">Blogs</Link>
+                <Link to="/yourBlogs" className="ms-2 btn btn-dark">Your Blogs</Link> 
+                <Link to="/create" className="ms-2 btn btn-dark">New Blog</Link>
+                <Link to="/manage" className="ms-2 btn btn-dark">Manage</Link>
+                <Link to="/profil" className="ms-2 btn btn-dark">Account</Link>
             </div>
 
             <form className="d-flex" role="search">
