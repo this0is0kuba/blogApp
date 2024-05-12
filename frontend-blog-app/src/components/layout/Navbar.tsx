@@ -1,7 +1,7 @@
 function Navbar() {
     return (
 
-        <nav className="navbar bg-dark border-bottom border-body px-4 py-3" data-bs-theme="dark">
+        <nav className="navbar bg-dark border-bottom border-body px-4 py-3 sticky-top" data-bs-theme="dark">
                     
             <h3 className="text-light">Word Weave</h3>
 

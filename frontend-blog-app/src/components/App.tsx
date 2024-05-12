@@ -8,7 +8,7 @@ function App() {
     <div className="App">
         <Navbar/>
 
-        <main className='container'>
+        <main className='container text-light rounded'>
 
           <BrowserRouter>
             <Routes>
