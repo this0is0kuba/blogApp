@@ -1,10 +1,25 @@
-import React from 'react';
+import Navbar from './layout/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './main/Home';
+import BlogSearcher from './main/BlogSearcher';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <h2>Hello</h2>
+        <Navbar/>
+
+        <main className='container'>
+
+          <BrowserRouter>
+            <Routes>
+
+              <Route path='/' element={<Home/>}></Route>
+              <Route path='/blogs' element={<BlogSearcher/>}></Route>
+
+            </Routes>
+          </BrowserRouter>
+
+        </main>
     </div>
   );
 }
