@@ -46,6 +46,19 @@ class BlogService {
 
         return response.json();
     }
+
+    public async getCommentByBlogId(blogId: number) {
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // const response = await fetch(BlogService.commentURL + "/" + blogId);
+        const response = await fetch(BlogService.commentURL);
+
+        if(!response.ok)
+            throw new Error('Could not fetch the data for that resource')
+
+        return response.json();
+    }
 }
 
 export default BlogService;
