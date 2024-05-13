@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Blog from "../../models/Blog";
 import BlogService from "../../services/BlogService";
-import BlogDetails from "../functional/BlogDetails";
+import BlogDetails from "./BlogDetails";
 
 function BlogPage() {
 
