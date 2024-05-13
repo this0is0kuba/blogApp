@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BlogService from "../../services/BlogService";
-import BlogList from "../functional/BlogList";
+import BlogList from "../display/BlogList";
 import Blog from "../../models/Blog";
 
 function Home() {

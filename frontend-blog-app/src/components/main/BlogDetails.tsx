@@ -1,14 +1,20 @@
 import Blog from "../../models/Blog";
 import Comment from "../../models/Comment";
 import BlogService from "../../services/BlogService";
-import CommentList from "./CommentList";
+import CommentList from "../display/CommentList";
 import { useState, useEffect } from "react";
+import CommentForm from "../functional/ComentForm";
 
 function BlogDetails({blog} : {blog: Blog}) {
 
     const [comments, setComments] = useState<Comment[] | null>(null);
     const [isPending, setPending] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);
+
+    function handleCommentEvent(newComment: Comment) {
+        setComments([newComment, ...comments!]);
+        console.log("no siema byku")
+    }
 
     useEffect( () => {
 
@@ -44,7 +50,7 @@ function BlogDetails({blog} : {blog: Blog}) {
             <p className="p-2 mt-3 rounded border">{blog.content}</p>
 
             <div className="mb-5">
-                <span >Category: <b className="text-danger">{blog.category}</b></span>
+                <span >Category: <b>{blog.category}</b></span>
             </div>
 
             <hr></hr>
@@ -52,7 +58,9 @@ function BlogDetails({blog} : {blog: Blog}) {
 
             {error && <h2>{error.message}</h2>}
             {isPending && <h2>Loading...</h2>}
-            {comments && <CommentList comments={comments} />}
+            {comments && <CommentForm blogId={blog.id} handleCommentEvent={handleCommentEvent} 
+                                      maxCommentId={Math.max(...comments!.map( (c) => c.id ))}/>}
+            {comments && <CommentList comments={comments}/>}
 
         </div>
     );
