@@ -13,7 +13,7 @@ function BlogPage() {
     const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
-        
+
         const blogService = BlogService.getBlogService();
 
         blogService.getBlog(parseInt(id!))

@@ -9,7 +9,7 @@ function Navbar() {
 
             <div className="links">
 
-                <Link to="/" className="btn">Home</Link>
+                <Link to="/" className="btn btn-dark">Home</Link>
                 <Link to="/blogs" className="ms-2 btn btn-dark">Blogs</Link>
                 <Link to="/yourBlogs" className="ms-2 btn btn-dark">Your Blogs</Link> 
                 <Link to="/create" className="ms-2 btn btn-dark">New Blog</Link>
