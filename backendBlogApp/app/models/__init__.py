@@ -4,3 +4,6 @@ from .blog import *
 from .comment import *
 from .category import *
 from .tag import *
+from .user_role import *
+from .blog_category import *
+from .blog_tag import *

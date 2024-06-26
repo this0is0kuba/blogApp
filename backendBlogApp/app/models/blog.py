@@ -1,11 +1,14 @@
 from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime
 from typing import TYPE_CHECKING
+from .blog_category import BlogCategoryLink
+from .blog_tag import BlogTagLink
 
 if TYPE_CHECKING:
     from comment import Comment
     from user import UserPublic
     from comment import CommentPublic
+    from category import Category
 
 
 class BlogBase(SQLModel):
@@ -21,6 +24,8 @@ class Blog(BlogBase, table=True):
 
     author: "User" = Relationship(back_populates="blogs")
     comments: list["Comment"] = Relationship(back_populates="blog")
+    categories: list["Category"] = Relationship(back_populates="blogs", link_model=BlogCategoryLink)
+    tagLinks: list["BlogTagLink"] = Relationship(back_populates="blog")
 
 
 class BlogCreate(BlogBase):

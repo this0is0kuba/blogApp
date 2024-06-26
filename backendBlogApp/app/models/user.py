@@ -1,11 +1,12 @@
 from sqlmodel import SQLModel, Field, Relationship
-
 from typing import TYPE_CHECKING
+from .user_role import UserRoleLink
 
 if TYPE_CHECKING:
-    from blog import Blog
-    from comment import Comment
-    from blog import BlogPublic
+    from .blog import Blog
+    from .comment import Comment
+    from .blog import BlogPublic
+    from .role import Role
 
 
 class UserBase(SQLModel):
@@ -20,6 +21,7 @@ class User(UserBase, table=True):
 
     blogs: list["Blog"] = Relationship(back_populates="author")
     comments: list["Comment"] = Relationship(back_populates="author")
+    roles: list["Role"] = Relationship(back_populates="users", link_model=UserRoleLink)
 
 
 class UserCreate(UserBase):

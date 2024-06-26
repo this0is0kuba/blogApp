@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from sqlmodel import create_engine, SQLModel
 
 # lines needed to initialize all models properly (It's necessary to import them to the main.py file)
-from models import User, Blog, Role, Comment, Tag, Category  # noqa
+from models import User, Blog, Role, Comment, Tag, Category, UserRoleLink, BlogCategoryLink, BlogTagLink  # noqa
 
 sqlite_file_name = "database.db"
 sqlite_url = f"sqlite:///{sqlite_file_name}"
