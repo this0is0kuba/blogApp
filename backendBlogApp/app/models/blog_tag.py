@@ -7,7 +7,7 @@ if TYPE_CHECKING:
 
 
 class BlogTagLink(SQLModel, table=True):
-    visible: bool = False
+    visible: bool = True
 
     blogId: int | None = Field(primary_key=True, foreign_key="blog.id", default=None)
     tagId: int | None = Field(primary_key=True, foreign_key="tag.id", default=None)
