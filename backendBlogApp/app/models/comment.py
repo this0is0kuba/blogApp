@@ -9,17 +9,17 @@ if TYPE_CHECKING:
 
 class CommentBase(SQLModel):
     content: str
-    creation_date: datetime
+    creationDate: datetime
 
-    author_id: int = Field(foreign_key="user.id")
-    blog_id: int = Field(foreign_key="blog.id")
+    authorId: int = Field(foreign_key="user.id")
+    blogId: int = Field(foreign_key="blog.id")
 
 
 class Comment(CommentBase, table=True):
     id: int | None = Field(primary_key=True, default=None)
 
     author: "User" = Relationship(back_populates="comments")
-    blog: "Blog" = Relationship(back_populates="comments")
+    blog: "Blog" = Relationship(back_populates="blogs")
 
 
 class CommentCreate(CommentBase):
