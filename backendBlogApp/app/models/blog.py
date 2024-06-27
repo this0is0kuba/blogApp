@@ -3,11 +3,11 @@ from datetime import datetime
 from typing import TYPE_CHECKING
 from .blog_category import BlogCategoryLink
 from .blog_tag import BlogTagLink
+from .user import UserPublic
+from .comment import CommentPublic
 
 if TYPE_CHECKING:
     from comment import Comment
-    from user import UserPublic
-    from comment import CommentPublic
     from category import Category
 
 
