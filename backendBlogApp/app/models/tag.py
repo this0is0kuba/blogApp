@@ -9,4 +9,4 @@ class Tag(SQLModel, table=True):
     id: int = Field(primary_key=True)
     name: str
 
-    blogLinks: list["BlogTagLink"] = Relationship(back_populates="tag")
+    blog_links: list["BlogTagLink"] = Relationship(back_populates="tag")

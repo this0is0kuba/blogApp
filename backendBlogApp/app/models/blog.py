@@ -15,9 +15,9 @@ if TYPE_CHECKING:
 class BlogBase(SQLModel):
     title: str = Field(min_length=1, max_length=30)
     content: str = Field(min_length=1, max_length=10_000)
-    creationDate: datetime
+    creation_date: datetime
 
-    authorId: int = Field(foreign_key="user.id")
+    author_id: int = Field(foreign_key="user.id")
 
 
 class Blog(BlogBase, table=True):
@@ -26,7 +26,7 @@ class Blog(BlogBase, table=True):
     author: "User" = Relationship(back_populates="blogs")
     comments: list["Comment"] = Relationship(back_populates="blog")
     categories: list["Category"] = Relationship(back_populates="blogs", link_model=BlogCategoryLink)
-    tagLinks: list["BlogTagLink"] = Relationship(back_populates="blog")
+    tag_links: list["BlogTagLink"] = Relationship(back_populates="blog")
 
 
 class BlogCreate(BlogBase):

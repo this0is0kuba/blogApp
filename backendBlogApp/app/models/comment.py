@@ -11,8 +11,8 @@ class CommentBase(SQLModel):
     content: str
     creationDate: datetime
 
-    authorId: int = Field(foreign_key="user.id")
-    blogId: int = Field(foreign_key="blog.id")
+    author_id: int = Field(foreign_key="user.id")
+    blog_id: int = Field(foreign_key="blog.id")
 
 
 class Comment(CommentBase, table=True):

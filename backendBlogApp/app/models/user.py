@@ -17,7 +17,7 @@ class UserBase(SQLModel):
 
 class User(UserBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    passwordHash: str
+    password_hash: str
 
     blogs: list["Blog"] = Relationship(back_populates="author")
     comments: list["Comment"] = Relationship(back_populates="author")

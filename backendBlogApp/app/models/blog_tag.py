@@ -9,7 +9,7 @@ if TYPE_CHECKING:
 class BlogTagLink(SQLModel, table=True):
     visible: bool = True
 
-    blogId: int | None = Field(primary_key=True, foreign_key="blog.id", default=None)
-    tagId: int | None = Field(primary_key=True, foreign_key="tag.id", default=None)
+    blog_id: int | None = Field(primary_key=True, foreign_key="blog.id", default=None)
+    tag_id: int | None = Field(primary_key=True, foreign_key="tag.id", default=None)
     blog: "Blog" = Relationship(back_populates="tagLinks")
     tag: "Tag" = Relationship(back_populates="blogLinks")
