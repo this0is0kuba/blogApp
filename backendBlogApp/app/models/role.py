@@ -8,6 +8,6 @@ if TYPE_CHECKING:
 
 class Role(SQLModel, table=True):
     id: int = Field(primary_key=True)
-    role_name: str
+    name: str
 
     users: list["User"] = Relationship(back_populates="roles", link_model=UserRoleLink)
