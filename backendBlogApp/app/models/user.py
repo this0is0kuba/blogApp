@@ -1,9 +1,9 @@
 from sqlmodel import SQLModel, Field, Relationship
 from typing import TYPE_CHECKING
 from .user_role import UserRoleLink
-from .blog import BlogPublic
 
 if TYPE_CHECKING:
+    from .blog import BlogPublic
     from .blog import Blog
     from .comment import Comment
     from .role import Role
@@ -34,5 +34,3 @@ class UserPublic(UserBase):
 
 class UserPublicWithBlogs(UserPublic):
     blogs: list["BlogPublic"]
-
-
