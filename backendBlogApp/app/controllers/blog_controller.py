@@ -15,8 +15,6 @@ def find_blogs(offset: int, limit: int):
 
 def find_blog(blog_id: int):
     with Session(engine) as session:
-        blog = session.exec(
-            select(Blog).get(Blog, blog_id)
-        )
+        blog = session.get(Blog, blog_id)
 
         return blog

@@ -6,7 +6,7 @@ if TYPE_CHECKING:
 
 
 class Tag(SQLModel, table=True):
-    id: int = Field(primary_key=True)
+    id: int | None = Field(primary_key=True, default=None)
     name: str
 
     blog_links: list["BlogTagLink"] = Relationship(back_populates="tag")

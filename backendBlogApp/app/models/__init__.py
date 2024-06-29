@@ -1,5 +1,4 @@
 from .user_role import *
-from .blog_category import *
 from .blog_tag import *
 from .user import *
 from .role import *
