@@ -1,0 +1,226 @@
+{
+    "user": [
+        {
+            "id": 1, 
+            "username": "john123",
+            "email": "john@wp.pl",
+            "role": ["user", "admin"]
+        },
+        {
+            "id": 2, 
+            "username": "adam123",
+            "email": "adam@wp.pl",
+            "role": ["user"]
+        },
+        {
+            "id": 3, 
+            "username": "mary123",
+            "email": "mary@wp.pl",
+            "role": ["admin"]
+        }
+    ],
+
+    "blog": [
+        {
+            "id": 1,
+            "title": "Coffee snack",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["coffee", "milk", "food", "dish", "snack"],
+            "category": "food",
+            "creationDate": "2024-03-02",
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+        {
+            "id": 2,
+            "title": "Best car",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["car", "drive", "speed"],
+            "category": "technology",
+            "creationDate": "2024-03-21",
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+        {
+            "id": 3,
+            "title": "New transport",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["plane", "transfer", "people", "flight", "transport"],
+            "category": "transport",
+            "creationDate": "2024-04-12",
+            "author":   {
+                "id": 2, 
+                "username": "adam123",
+                "email": "adam@wp.pl",
+                "role": ["user"]
+            }
+        },
+        {
+            "id": 4,
+            "title": "Coffee snack",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["coffee", "milk", "food", "dish", "snack"],
+            "category": "food",
+            "creationDate": "2024-04-15",
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+        {
+            "id": 5,
+            "title": "Best car",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["car", "drive", "speed"],
+            "category": "technology",
+            "creationDate": "2024-04-29",
+            "author":   {
+                "id": 2, 
+                "username": "adam123",
+                "email": "adam@wp.pl",
+                "role": ["user"]
+            }
+        },
+        {
+            "id": 6,
+            "title": "New transport",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["plane", "transfer", "people", "flight", "transport"],
+            "category": "transport",
+            "creationDate": "2024-05-01",
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+        {
+            "id": 7,
+            "title": "Coffee snack",
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "tags": ["coffee", "milk", "food", "dish", "snack"],
+            "category": "food",
+            "creationDate": "2024-05-02",
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        }
+    ],
+
+    "comment": [
+        {
+            "id": 1,
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+            "creationDate": "2024-03-02",
+            "blogId": 1,
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+        {
+            "id": 2,
+            "content": "Animi laborum deserunt nostrum eum tenetur",
+            "creationDate": "2024-03-02",
+            "blogId": 1,
+            "author":   {
+                "id": 2, 
+                "username": "adam123",
+                "email": "adam@wp.pl",
+                "role": ["user"]
+            }
+        },
+        {
+            "id": 3,
+            "content": "Blanditiis modi quam assumenda cum similique",
+            "creationDate": "2024-03-02",
+            "blogId": 1,
+            "author":  {
+                "id": 2, 
+                "username": "adam123",
+                "email": "adam@wp.pl",
+                "role": ["user"]
+            }
+        },
+        {
+            "id": 4,
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur. Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "creationDate": "2024-03-03",
+            "blogId": 1,
+            "author":  {
+                "id": 2, 
+                "username": "mary123",
+                "email": "mary@wp.pl",
+                "role": ["user"]
+            }
+        },
+        
+
+        {
+            "id": 5,
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+            "creationDate": "2024-04-12",
+            "blogId": 3,
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+        {
+            "id": 6,
+            "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi laborum deserunt nostrum eum tenetur.",
+            "creationDate": "2024-04-15",
+            "blogId": 3,
+            "author":  {
+                "id": 4, 
+                "username": "mary123",
+                "email": "mary@wp.pl",
+                "role": ["user"]
+            }
+        },
+        {
+            "id": 7,
+            "content": "Blanditiis modi quam assumenda cum similique, ullam atque corrupti quasi labore voluptas in veniam, corporis maxime.",
+            "creationDate": "2024-04-16",
+            "blogId": 3,
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        },
+
+
+         {
+            "id": 8,
+            "content": "Lorem ipsum dolor",
+            "creationDate": "2024-05-12",
+            "blogId": 3,
+            "author":  {
+                "id": 1, 
+                "username": "john123",
+                "email": "john@wp.pl",
+                "role": ["user", "admin"]
+            }
+        }
+    ]
+}
