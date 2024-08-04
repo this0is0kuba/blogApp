@@ -3,8 +3,8 @@ from sqlmodel import SQLModel, Field, Relationship
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from user import User
-    from blog import Blog
+    from .user import User
+    from .blog import Blog
 
 
 class CommentBase(SQLModel):

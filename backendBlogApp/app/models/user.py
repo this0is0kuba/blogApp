@@ -1,12 +1,9 @@
 from sqlmodel import SQLModel, Field, Relationship
-
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from blog import Blog
-    from comment import Comment
-    from blog import BlogPublic
-
+    from .blog import Blog, BlogPublic
+    from .comment import Comment
 
 class UserBase(SQLModel):
     email: str = Field(max_length=50, index=True, unique=True)

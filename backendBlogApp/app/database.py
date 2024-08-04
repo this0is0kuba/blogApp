@@ -1,7 +1,7 @@
 from sqlmodel import create_engine, SQLModel, Session
 
-# lines needed to initialize all models properly (It's necessary to import them to the main.py file)
-from models import *  # noqa
+# lines needed to initialize all models properly
+from models import User, Blog, Role, Comment, Tag, Category  # noqa
 
 sqlite_file_name = "database.db"
 sqlite_url = f"sqlite:///{sqlite_file_name}"

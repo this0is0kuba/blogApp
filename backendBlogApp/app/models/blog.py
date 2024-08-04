@@ -2,10 +2,11 @@ from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime
 from typing import TYPE_CHECKING
 
+from .user import UserPublic
+from .comment import CommentPublic
+
 if TYPE_CHECKING:
-    from comment import Comment
-    from user import UserPublic
-    from comment import CommentPublic
+    from .comment import Comment
 
 
 class BlogBase(SQLModel):
