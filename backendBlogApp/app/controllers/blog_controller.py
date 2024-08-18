@@ -1,20 +1,24 @@
-from sqlmodel import Session, select
+from sqlalchemy.orm import selectinload
+from sqlmodel import select, Session
 from models import Blog
-from database import engine
 
 
-def find_blogs(offset: int, limit: int):
-    with Session(engine) as session:
+def find_blogs(offset: int, limit: int, session: Session):
 
-        blogs = session.exec(
-            select(Blog).offset(offset).limit(limit)
-        ).all()
-
-        return blogs
+    return session.exec(
+        select(Blog).offset(offset).limit(limit)
+    ).all()
 
 
-def find_blog(blog_id: int):
-    with Session(engine) as session:
-        blog = session.get(Blog, blog_id)
+def find_blog(blog_id: int, session: Session):
 
-        return blog
+    return session.get(Blog, blog_id)
+
+
+def find_blog_with_author(blog_id: int, session: Session):
+
+    statement = select(Blog).where(Blog.id == blog_id).options(
+        selectinload(Blog.author)
+    )
+
+    return session.exec(statement).first()

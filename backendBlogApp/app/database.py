@@ -1,7 +1,7 @@
 from sqlmodel import create_engine, SQLModel, Session
 
 # lines needed to initialize all models properly
-from models import User, Blog, Role, Comment, Tag, Category  # noqa
+from models import *  # noqa
 
 sqlite_file_name = "database.db"
 sqlite_url = f"sqlite:///{sqlite_file_name}"
@@ -16,3 +16,8 @@ def create_db_and_tables():
 
 def drop_database():
     SQLModel.metadata.drop_all(engine)
+
+
+def get_session():
+    with Session(engine) as session:
+        yield session

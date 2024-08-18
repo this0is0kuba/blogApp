@@ -1,9 +1,12 @@
 from sqlmodel import SQLModel, Field, Relationship
 from typing import TYPE_CHECKING
+from .user_role import UserRoleLink
 
 if TYPE_CHECKING:
     from .blog import Blog, BlogPublic
     from .comment import Comment
+    from .role import Role
+
 
 class UserBase(SQLModel):
     email: str = Field(max_length=50, index=True, unique=True)
@@ -13,10 +16,11 @@ class UserBase(SQLModel):
 
 class User(UserBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    passwordHash: str
+    password_hash: str
 
     blogs: list["Blog"] = Relationship(back_populates="author")
     comments: list["Comment"] = Relationship(back_populates="author")
+    roles: list["Role"] = Relationship(back_populates="users", link_model=UserRoleLink)
 
 
 class UserCreate(UserBase):
