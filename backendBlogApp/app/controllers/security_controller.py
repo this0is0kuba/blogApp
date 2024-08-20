@@ -7,14 +7,8 @@ from app.configs.configs import ACCESS_TOKEN_EXPIRE_DAYS, SECRET_KEY, ALGORITHM,
 from database import get_session
 from models.token import Token, TokenData
 from models import User
-from sqlmodel import Session, select
-
-
-def find_user(session: Session, username: str):
-
-    return session.exec(
-        select(User).where(User.username == username)
-    ).first()
+from sqlmodel import Session
+from app.repositories import user_repository
 
 
 def validate_password(plain_password: str, hashed_password: str):
@@ -23,7 +17,7 @@ def validate_password(plain_password: str, hashed_password: str):
 
 def authenticate_user(username: str, password: str, session: Session):
 
-    user: User = find_user(session, username)
+    user: User = user_repository.find_user(username, session)
 
     if not user:
         return None
@@ -75,7 +69,7 @@ def get_current_user(
     except InvalidTokenError:
         raise credentials_exception
 
-    user = find_user(session, username=token_data.username)
+    user = user_repository.find_user(token_data.username, session)
 
     if user is None:
         raise credentials_exception

@@ -2,6 +2,7 @@ from fastapi import APIRouter, Query, HTTPException, Depends
 from controllers.security_controller import get_current_active_user
 from models import BlogPublic, BlogPublicWithAuthor, User
 from app.controllers.blog_controller import *
+from database import get_session, Session
 
 router = APIRouter(
     prefix="/blogs",
