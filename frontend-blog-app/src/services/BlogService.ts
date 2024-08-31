@@ -1,10 +1,11 @@
 import Blog from "../models/Blog";
+import fetchWithAuth from "./ApiService";
 
 class BlogService {
 
     private static instance: BlogService;
-    private static readonly blogURL: string = "http://localhost:8000/blog";
-    private static readonly commentURL: string = "http://localhost:8000/comment"; 
+    private static readonly blogURL: string = "http://localhost:8000/blogs/";
+    private static readonly commentURL: string = "http://localhost:8000/comments/"; 
     private static blogList: Blog[];
 
     private constructor() {}
@@ -39,7 +40,7 @@ class BlogService {
 
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        const response = await fetch(BlogService.blogURL + "/" + id);
+        const response = await fetchWithAuth(BlogService.blogURL + id);
 
         if(!response.ok)
             throw new Error('Could not fetch the data for that resource')
@@ -47,11 +48,10 @@ class BlogService {
         return response.json();
     }
 
-    public async getCommentByBlogId(blogId: number) {
+    public async getCommentsByBlogId(blogId: number) {
 
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // const response = await fetch(BlogService.commentURL + "/" + blogId);
         const response = await fetch(BlogService.commentURL);
 
         if(!response.ok)

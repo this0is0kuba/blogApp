@@ -13,14 +13,13 @@ function BlogDetails({blog} : {blog: Blog}) {
 
     function handleCommentEvent(newComment: Comment) {
         setComments([newComment, ...comments!]);
-        console.log("no siema byku")
     }
 
     useEffect( () => {
 
         const blogService = BlogService.getBlogService();
 
-        blogService.getCommentByBlogId(blog.id)
+        blogService.getCommentsByBlogId(blog.id)
             .then( (data: Comment[]) => {
                 setComments(data) 
                 setPending(false)

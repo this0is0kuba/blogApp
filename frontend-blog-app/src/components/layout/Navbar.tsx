@@ -21,6 +21,10 @@ function Navbar() {
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
+
+            <Link to="/login" className="btn btn-dark border border-2">
+                <i className="bi bi-person h4"></i>
+            </Link>
             
         </nav>
     );
