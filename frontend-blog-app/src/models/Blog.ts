@@ -1,14 +1,15 @@
+import Category from "./Category";
 import User from "./User";
 
-interface Blog {
+export interface Blog {
 
     id: number;
     title: string;
     content: string;
     tags: string[];
-    category: string,
     creationDate: string;
     author: User;
+    category: Category,
+    authorId: number,
+    categoryId: number
 }
-
-export default Blog;
