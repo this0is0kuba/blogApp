@@ -2,6 +2,8 @@ from datetime import datetime
 from sqlmodel import SQLModel, Field, Relationship
 from typing import TYPE_CHECKING
 
+from .user import UserPublic
+
 if TYPE_CHECKING:
     from .user import User
     from .blog import Blog
@@ -28,3 +30,4 @@ class CommentCreate(CommentBase):
 
 class CommentPublic(CommentBase):
     id: int
+    author: "UserPublic"

@@ -3,6 +3,7 @@ from datetime import datetime
 from typing import TYPE_CHECKING
 
 from .user import UserPublic
+from .category import Category
 
 if TYPE_CHECKING:
     from .comment import Comment
@@ -38,5 +39,6 @@ class BlogPublic(BlogBase):
 
 class BlogPublicWithAuthor(BlogPublic):
     author: "UserPublic"
+    category: "Category"
 
 

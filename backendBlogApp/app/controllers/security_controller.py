@@ -45,7 +45,7 @@ def create_token(user: User) -> Token:
         data={"sub": user.username}, expires_delta=access_token_expires
     )
 
-    return Token(access_token=access_token, token_type="bearer")
+    return Token(access_token=access_token, token_type="Bearer")
 
 
 def get_current_user(
