@@ -1,20 +1,14 @@
-from sqlmodel import Session, select
-from models import Blog
-from database import engine
+from sqlmodel import Session
+from app.repositories import blog_repository
 
 
-def find_blogs(offset: int, limit: int):
-    with Session(engine) as session:
-
-        blogs = session.exec(
-            select(Blog).offset(offset).limit(limit)
-        ).all()
-
-        return blogs
+def find_blogs(offset: int, limit: int, session: Session):
+    return blog_repository.find_blogs(offset, limit, session)
 
 
-def find_blog(blog_id: int):
-    with Session(engine) as session:
-        blog = session.get(Blog, blog_id)
+def find_blog(blog_id: int, session: Session):
+    return blog_repository.find_blog(blog_id, session)
 
-        return blog
+
+def find_blog_with_author(blog_id: int, session: Session):
+    return blog_repository.find_blog_with_author(blog_id, session)
