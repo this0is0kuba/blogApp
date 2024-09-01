@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Blog from "../../models/Blog";
+import { Blog } from "../../models/Blog";
 import BlogService from "../../services/BlogService";
 import BlogDetails from "./BlogDetails";
 
 function BlogPage() {
 
-    const { id } = useParams()
+    const { id } = useParams();
 
-    const [blog, setBlog] = useState<Blog>();
+    const [blog, setBlog] = useState<Blog | null>(null);
     const [isPending, setPending] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);
 
@@ -18,7 +18,7 @@ function BlogPage() {
 
         blogService.getBlog(parseInt(id!))
             .then( (data: Blog) => {
-                setBlog(data) 
+                setBlog(data);
                 setPending(false)
                 setError(null);
             })

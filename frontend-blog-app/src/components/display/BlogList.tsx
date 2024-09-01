@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Blog from "../../models/Blog";
+import { Blog } from "../../models/Blog";
 
 function BlogList({blogs}: {blogs: Blog[]}) {
 

@@ -1,4 +1,4 @@
-import Blog from "../../models/Blog";
+import { Blog } from "../../models/Blog";
 import Comment from "../../models/Comment";
 import BlogService from "../../services/BlogService";
 import CommentList from "../display/CommentList";
@@ -13,14 +13,13 @@ function BlogDetails({blog} : {blog: Blog}) {
 
     function handleCommentEvent(newComment: Comment) {
         setComments([newComment, ...comments!]);
-        console.log("no siema byku")
     }
 
     useEffect( () => {
 
         const blogService = BlogService.getBlogService();
 
-        blogService.getCommentByBlogId(blog.id)
+        blogService.getCommentsByBlogId(blog.id)
             .then( (data: Comment[]) => {
                 setComments(data) 
                 setPending(false)
@@ -50,7 +49,7 @@ function BlogDetails({blog} : {blog: Blog}) {
             <p className="p-2 mt-3 rounded border">{blog.content}</p>
 
             <div className="mb-5">
-                <span >Category: <b>{blog.category}</b></span>
+                <span >Category: <b>{blog.category.name}</b></span>
             </div>
 
             <hr></hr>
