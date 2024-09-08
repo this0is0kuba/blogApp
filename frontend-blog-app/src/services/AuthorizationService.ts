@@ -1,9 +1,12 @@
 import Token from "../models/Token";
+import { clientId } from "../secret";
 
 class AuthorizationService {
 
     private static instance: AuthorizationService;
     private readonly authorizationURL: string = "http://localhost:8000/token";
+    // Google's OAuth 2.0 endpoint for requesting an access token
+    private readonly oauth2Endpoint: string = 'https://accounts.google.com/o/oauth2/v2/auth';
     private token: Token | null = null;
 
     private constructor() {}
@@ -48,6 +51,21 @@ class AuthorizationService {
 
     public getToken(): Token | null {
         return this.token;
+    }
+
+    public async oauthSignIn(): Promise<void> {
+
+        // Parameters to pass to OAuth 2.0 endpoint
+        const params = new URLSearchParams({
+            client_id: clientId,
+            redirect_uri: 'http://localhost:3000/GoogleCallback',
+            response_type: 'token',
+            scope: 'https://www.googleapis.com/auth/drive.metadata.readonly',
+            include_granted_scopes: 'true',
+            state: 'pass-through value'
+        });
+
+        window.location.replace(`${this.oauth2Endpoint}?${params.toString()}`)
     }
 
 }
