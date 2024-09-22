@@ -38,11 +38,15 @@ function LoginPage() {
         })
     }
 
+    function loginViaGoogle() {
+
+        authService?.oauthSignIn()
+    }
 
     return (
         <div className="d-flex align-items-center flex-column">
-            <form onSubmit={login} className="w-50 d-flex align-items-center flex-column p-5 bg-dark m-3 rounded shadow">
 
+            <form onSubmit={login} className="w-50 d-flex align-items-center flex-column p-5 bg-dark m-3 rounded shadow">
                 <input type='text' name="email" id='emailInput' className="form-control mt-4 p-2"
                  value={email} placeholder="email" onChange={ (e) => {setEmail(e.target.value)} }/>
 
@@ -51,9 +55,15 @@ function LoginPage() {
 
                 <button type="submit" className="btn btn-primary mt-4"> Submit </button>
             </form>
+
+
+            <button className="btn btn-info mt-4" onClick={loginViaGoogle}> Login via Google </button>
+
+
             {isPending && <h1 className="text-center">Loading...</h1>}
             {error && <h3 className="text-center">Something was wrong</h3>}
         </div>
+        
     );
 }
 
