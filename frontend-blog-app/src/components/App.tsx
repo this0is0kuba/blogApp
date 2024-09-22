@@ -5,6 +5,7 @@ import BlogSearcher from './main/BlogSearcher';
 import BlogPage from './main/BlogPage';
 import LoginPage from './main/Login';
 import ProtectedRoutes from './functional/ProtectedRoutes';
+import GoogleCallbackPage from './main/GoogleCallback';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path='/blogs/:id' element={<BlogPage/>} ></Route>
               </Route>
               <Route path='/login' element={<LoginPage/>}></Route>
+              <Route path='/GoogleCallback' element={<GoogleCallbackPage/>} ></Route>
 
             </Routes>
 

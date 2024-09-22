@@ -65,6 +65,8 @@ class AuthorizationService {
             state: 'pass-through value'
         });
 
+        window.localStorage.setItem('state', 'pass-through value');
+
         window.location.replace(`${this.oauth2Endpoint}?${params.toString()}`)
     }
 
